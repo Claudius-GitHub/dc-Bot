@@ -1,10 +1,10 @@
 const Discord = require('discord.js');
 
 
-exports.run = function(client, message) {
+exports.run = function(client, message , args) {
 	const sayi = args.slice(0).join(' ');
 if(sayi.length < 1) {
-	return message.channel.send("Kaç mesaj sileceğim ? Doğru kullanım !temizle **rakam**")	
+	return message.reply("Kaç mesaj sileceğim ? Doğru kullanım !temizle **rakam**")	
 }else {
 	message.channel.bulkDelete(sayi + 1);
 message.channel.send("**" + sayi + "** mesaj silindi").then(msg => {
