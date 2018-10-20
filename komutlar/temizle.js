@@ -2,26 +2,16 @@ const Discord = require('discord.js');
 
 
 exports.run = function(client, message) {
-message.channel.bulkDelete(75);
-message.channel.send("Kendini imha modu başlatıldı").then(msg => {
+	const sayi = args.slice(0).join(' ');
+if(sayi.length > 1) {
+	return message.channel.send("Kaç mesaj sileceğim ? Doğru kullanım !temizle **rakam**")	
+}else {
+	message.channel.bulkDelete(sayi + 1);
+message.channel.send("**" + sayi + "** mesaj silindi").then(msg => {
 	msg.delete(5000)
 })
-	message.channel.send("10").then(msg => {
-	msg.delete(5000)
-})
+}
 	
-	message.channel.send("9").then(msg => {
-	msg.delete(5000)
-})
-	message.channel.send("8").then(msg => {
-	msg.delete(5000)
-})
-	message.channel.send("7").then(msg => {
-	msg.delete(5000)
-})
-	message.channel.send("ehe ehe şaka yaptım. Bak ortalık tertemiz oldu.").then(msg => {
-	msg.delete(7000)
-})
 
 };
 
