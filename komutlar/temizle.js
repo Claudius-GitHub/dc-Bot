@@ -18,7 +18,7 @@ message.channel.send("Bu dahil **" + sayi + "** mesaj silindi").then(msg => {
 exports.conf = {
   enabled: true, 
   guildOnly: true, 
-  aliases: ["lüplüp","aklapakla","silsüpür" ],
+  aliases: ["lüplüp","aklapakla","silsüpür","sil" ],
   permLevel: 0 
 };
 
