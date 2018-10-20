@@ -6,8 +6,8 @@ exports.run = function(client, message , args) {
 if(sayi.length < 1) {
 	return message.reply("Kaç mesaj sileceğim ? Doğru kullanım !temizle **rakam**")	
 }else {
-	message.channel.bulkDelete(sayi + 1);
-message.channel.send("**" + sayi + "** mesaj silindi").then(msg => {
+	message.channel.bulkDelete(sayi);
+message.channel.send("Bu dahil **" + sayi + "** mesaj silindi").then(msg => {
 	msg.delete(5000)
 })
 }
