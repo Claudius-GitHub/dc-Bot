@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 
 exports.run = function(client, message) {
 	const sayi = args.slice(0).join(' ');
-if(sayi.length > 1) {
+if(sayi.length < 1) {
 	return message.channel.send("Kaç mesaj sileceğim ? Doğru kullanım !temizle **rakam**")	
 }else {
 	message.channel.bulkDelete(sayi + 1);
