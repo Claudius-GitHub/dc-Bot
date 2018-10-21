@@ -10,8 +10,8 @@ var prefix = ayarlar.prefix;
 
 const log = message => {
   console.log(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] ${message}`);
+	
 };
-
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 fs.readdir('./komutlar/', (err, files) => {
@@ -78,34 +78,10 @@ client.unload = command => {
   });
 };
 
-client.on('message', msg => {
-
-  if (msg.content.toLowerCase() === 'sa') {
-		if (!msg.guild.member(msg.author).hasPermission("BAN_MEMBERS")) {
-			msg.author.sendMessage('Aleyküm selam,  hoş geldin ^^'); 
-		} else {
-		msg.reply('Aleyküm selam, hoş geldin ^^');
-		}
-	}
-});
 
 ////////////////////////
 
-client.on("guildMemberAdd", member => {
-	
-	var channel = member.guild.channels.find("name", "tosuncuk");
-	if (!channel) return;
-	
-	var role = member.guild.roles.find("name", "Gladiatus User");
-	if (!role) return;
-	
-	member.addRole(role); 
-	
-	channel.send(member + " artık " + role + " rolü ile aramızda");
-	
-	member.send("Aramıza hoş geldin! Artık @Gladiatus User rolüne sahipsin!")
-	
-});
+
 
 ////////////////////////
 
@@ -129,4 +105,12 @@ client.on('error', e => {
   console.log(chalk.bgRed(e.replace(regToken, 'that was redacted')));
 });
 
+/// İHLALLER ///
+
+//Değiken
+
+//Değişken sonu
+
+
+/// İHLALLER SONU ///
 client.login(process.env.TOKEN);
