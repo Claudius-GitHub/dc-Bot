@@ -3,17 +3,19 @@ const Discord = require('discord.js');
 
 exports.run = function(client, message , args) {
 	const sayi = args.slice(0).join(' ');
-if(sayi.length < 1) {
+	if(sayi.length < 1) {
 	return message.reply("Kaç mesaj sileceğim ? Doğru kullanım !temizle **rakam**")	
-}else {
+}else if (sayi <= 1 || sayi > 100){message.reply("1 - 99 arası rakam girin")
+
+	}else{
 	message.channel.bulkDelete(sayi);
-message.channel.send("Bu dahil **" + sayi + "** mesaj silindi").then(msg => {
-	msg.delete(5000)
-})
-}
-	
+	message.channel.send("Bu dahil **" + sayi + "** mesaj silindi").then(msg => {
+		msg.delete(5000)
+		})
+	}	
 
 };
+
 
 exports.conf = {
   enabled: true, 
