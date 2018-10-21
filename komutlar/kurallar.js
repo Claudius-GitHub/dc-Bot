@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 
 
-exports.run = function(client, message) {
+exports.run = function(client, message, args) {
 const oyunTakimi = [
 	"334399841931231232", //claudius
 	"424897059007758337", //aiakos
