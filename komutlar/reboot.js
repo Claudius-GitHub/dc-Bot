@@ -9,14 +9,9 @@ exports.run = function(client, message) {
 			  console.log('yeniden başlatılıyor')
 			  process.exit(0);
 		  });
-	  } else if (message.author.id === "334399841931231032") {
-		  message.channel.send('Hop aloo sen kendini Claudius SGO mu sandın birader ?!\nPardon ama bu komut ona özel\n!temizle yaz görmesin.... JUNK').then(msg => {
-			  console.log('yeniden başlayılıyor')
-
-		  });
-	  }else 
+	  } else {
 		  message.channel.send('Hop aloo sen kendini Claudius SGO mu sandın birader ?!\nPardon ama bu komut ona özel\n!temizle yaz görmesin...')
- 
+	  }
     
 
 };
